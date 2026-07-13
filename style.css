@@ -1,43 +1,181 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    background:linear-gradient(135deg,#ff758c,#ff7eb3);
-    font-family:Arial;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    color:white;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-family:Arial,Helvetica,sans-serif;
+
+background:linear-gradient(135deg,#ff6f91,#ff8fab,#ffc2d1);
+
+overflow:hidden;
+
+color:white;
+
 }
 
 .container{
-    text-align:center;
-    max-width:700px;
+
+width:95%;
+
+max-width:1050px;
+
+padding:25px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+border-radius:25px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+text-align:center;
+
 }
 
-.photo{
-    width:250px;
-    border-radius:20px;
-    box-shadow:0 0 20px white;
+h1{
+
+font-size:45px;
+
+margin-bottom:10px;
+
 }
 
-.message{
-    font-size:20px;
-    margin:20px;
-    line-height:1.7;
+.subtitle{
+
+font-size:20px;
+
+margin-bottom:25px;
+
+}
+
+.gallery{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+margin-bottom:25px;
+
+}
+
+.photo-card{
+
+width:300px;
+
+height:300px;
+
+overflow:hidden;
+
+border-radius:20px;
+
+border:6px solid white;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+transition:.4s;
+
+}
+
+.photo-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.photo-card img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+.letter{
+
+background:white;
+
+color:#ff3f70;
+
+padding:20px;
+
+border-radius:20px;
+
+font-size:18px;
+
+line-height:1.7;
+
+margin-bottom:20px;
+
 }
 
 button{
-    padding:15px 35px;
-    font-size:18px;
-    background:white;
-    color:#ff4081;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
+
+padding:16px 35px;
+
+font-size:20px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+color:#ff3f70;
+
+cursor:pointer;
+
+transition:.3s;
+
+font-weight:bold;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
 }
 
 #hiddenMessage{
-    display:none;
-    margin-top:25px;
-    font-size:24px;
+
+display:none;
+
+margin-top:20px;
+
+font-size:30px;
+
+font-weight:bold;
+
+animation:fade 1s;
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
 }
